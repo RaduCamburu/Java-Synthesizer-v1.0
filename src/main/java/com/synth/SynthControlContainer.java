@@ -6,18 +6,10 @@ import java.awt.*;
 public class SynthControlContainer extends JPanel {
     protected Point mouseClickLocation;
     protected boolean on;
-    private SynthesizerV1 synth;
+    private final SynthesizerV1 synth;
 
     public SynthControlContainer(SynthesizerV1 synth) {
         this.synth = synth;
-    }
-
-    public boolean isOn() {
-        return on;
-    }
-
-    public void setOn(boolean on) {
-        this.on = on;
     }
 
     @Override
