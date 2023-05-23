@@ -15,6 +15,7 @@ public class SynthesizerV1 {
     private boolean shouldGenerate;
 
     private final Oscillator[] oscillators = new Oscillator[3];
+    private final WaveViewer waveViewer = new WaveViewer(oscillators);
     private final AudioThread audioThread = new AudioThread(() -> {
         if (!shouldGenerate) {
             return null;
@@ -75,6 +76,8 @@ public class SynthesizerV1 {
         Oscillator osc = new Oscillator(this);
         osc.setLocation(5,0);
         frame.add(osc);
+        waveViewer.setBounds(290,0,310,310);
+        frame.add(waveViewer);
         frame.addKeyListener(keyAdapter);
         frame.addWindowListener(new WindowAdapter() {
             @Override
@@ -92,6 +95,10 @@ public class SynthesizerV1 {
 
     public KeyAdapter getKeyAdapter() {
         return keyAdapter;
+    }
+
+    public void updateWaveViewer() {
+        waveViewer.repaint();
     }
 
     public static class AudioInfo {

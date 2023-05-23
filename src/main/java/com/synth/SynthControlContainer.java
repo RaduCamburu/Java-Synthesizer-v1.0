@@ -4,11 +4,26 @@ import javax.swing.*;
 import java.awt.*;
 
 public class SynthControlContainer extends JPanel {
-    protected Point mouseClickLocation;
+
+    protected boolean on;
     private final SynthesizerV1 synth;
+    private Point mouseClickLocation;
 
     public SynthControlContainer(SynthesizerV1 synth) {
         this.synth = synth;
+    }
+    public Point getMouseClickLocation() {
+        return mouseClickLocation;
+    }
+
+    public void setMouseClickLocation(Point mouseClickLocation) {
+        this.mouseClickLocation = mouseClickLocation;
+    }
+    public boolean isOn() {
+        return on;
+    }
+    public void setOn(boolean on) {
+        this.on = on;
     }
 
     @Override
