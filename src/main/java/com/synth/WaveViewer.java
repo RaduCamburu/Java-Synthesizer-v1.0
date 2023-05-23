@@ -7,7 +7,7 @@ import java.awt.*;
 import java.util.function.Function;
 
 public class WaveViewer extends JPanel {
-    private Oscillator[] oscillators;
+    final Oscillator[] oscillators;
     public WaveViewer(Oscillator[] oscillators) {
         this.oscillators = oscillators;
         setBorder((Utils.WindowDesign.LINE_BORDER));

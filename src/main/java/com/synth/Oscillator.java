@@ -10,8 +10,8 @@ public class Oscillator extends SynthControlContainer {
 
     private static final int TONE_OFFSET_LIMIT = 2000;
     private Wavetable wavetable = Wavetable.Sine;
-    private RefWrapper<Integer> toneOffset = new RefWrapper<>(0);
-    private RefWrapper<Integer> volume = new RefWrapper<>(100);
+    private final RefWrapper<Integer> toneOffset = new RefWrapper<>(0);
+    private  final RefWrapper<Integer> volume = new RefWrapper<>(100);
     private double keyFrequency;
     private int wavetableStepSize;
     private int wavetableIndex;
