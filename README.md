@@ -9,5 +9,5 @@ Current features:
 
 Future updates:
 - On/Off checkbox
-- Volume editable value
+- Volume editable value for each oscillator
 - Waveform graph visual implementation
